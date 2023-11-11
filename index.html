@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Aluno</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div id="container">
+        <h1>Realize seu cadastro</h1>
+        <form id="form">
+            
+            <label for="nome">Nome</label>
+            <input type="text" id="nome"  name="nome" class="inputs required" placeholder="Digite o seu nome" oninput="nameValidate()">
+            <span class="span-required">O nome deve ter no mínimo 3 caracteres</span>
+       
+            <label for="endereco">Endereço</label>
+            <input type="text"  name="endereco" class="inputs required" placeholder="Digite o seu endereço" oninput="endeValidate()">
+            <span class="span-required">Digite o seu endereço</span>
+
+            <label for="telefone">Telefone</label>
+            <input type="text"  name="telefone" class="inputs required" placeholder="Digite o seu telefone" oninput="phoneValidate()">
+            <span class="span-required">Digite um número com 9 digitos EX: 912345678</span>
+
+            <label for="Email">Email</label>
+            <input type="email"  name="email" class="inputs required" placeholder="Digite o seu email" oninput="emailValidate()">
+            <span class="span-required">Digite um email válido EX: lucas@gmail.com</span>
+
+            <label for="idade">Idade</label>
+            <input type="number" name="idade" class="inputs required" placeholder="Digite a sua idade">
+    
+
+            <label for="genero">Genero</label>
+            <div class="gender-group">
+                <div class="gender-input">
+                    <input type="radio" id="m" name="gender">
+                    <label for="female">Masculino</label>
+                </div>
+                <div class="gender-input">
+                    <input type="radio" id="f" name="gender">
+                    <label for="male">Feminino</label>
+                </div>
+                <div class="gender-input">
+                    <input type="radio" id="o" name="gender">
+                    <label for="others"> Outros</label>
+                </div>
+            </div>
+            <input type="submit" value="Cadastrar" id="submit" onclick="clickEvent()">
+        </form>
+    </div>
+    <script src="js/scripts.js"></script>
+</body>
+
+</html>
